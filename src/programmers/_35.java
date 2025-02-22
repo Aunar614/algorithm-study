@@ -6,6 +6,14 @@ public class _35 {
         int age = 100;
     }
 
+    public String solution(int age) {
+        String ageString = String.valueOf(age);
+        String[] strings = ageString.split("");
+        int max = strings.length;
+
+        return checkAscii(strings, max);
+    }
+
     private static String checkAscii(String[] strings, int max) {
         StringBuilder temp = new StringBuilder();
 
@@ -18,13 +26,5 @@ public class _35 {
         }
 
         return temp.toString();
-    }
-
-    public String solution(int age) {
-        String ageString = String.valueOf(age);
-        String[] strings = ageString.split("");
-        int max = strings.length;
-
-        return checkAscii(strings, max);
     }
 }
