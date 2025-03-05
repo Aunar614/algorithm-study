@@ -1,4 +1,4 @@
-package jongol;
+package jungol;
 
 public class Jungol_9013 {
 
