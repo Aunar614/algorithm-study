@@ -1,7 +1,7 @@
 package jungol.stepping.array;
 
 import java.io.*;
-import java.util.Scanner;
+import java.util.*;
 
 public class Jungol_559 {
 
@@ -9,10 +9,22 @@ public class Jungol_559 {
         Scanner sc = new Scanner(System.in);
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        double[] avgScores = {85.6, 79.5, 83.1, 80.0, 78.2, 75.0};
-        double sum = avgScores[sc.nextInt() - 1] + avgScores[sc.nextInt() - 1];
+        List<Integer> odd = new ArrayList<>();
+        List<Integer> even = new ArrayList<>();
 
-        bw.write(String.format("%.1f", sum));
+        for (int i = 0; i < 10; i++) {
+            int num = sc.nextInt();
+            if (num % 2 == 0) {
+                even.add(num);
+            } else {
+                odd.add(num);
+            }
+        }
+
+        odd.sort(Comparator.naturalOrder());
+        even.sort(Comparator.naturalOrder());
+
+        bw.write(odd.getFirst() + " " + even.getLast());
 
         sc.close();
         bw.close();
