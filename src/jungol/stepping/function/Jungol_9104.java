@@ -1,28 +1,28 @@
 package jungol.stepping.function;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class Jungol_9104 {
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        String str = br.readLine();
-        String[] numbers = str.split("");
+        int a = sc.nextInt();
 
-        sumNum(numbers);
+        dice(a);
 
-        br.close();
     }
 
-    private static void sumNum(String[] numbers) {
-        int sum = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            sum += Integer.parseInt(numbers[i]);
+    private static void dice(int a) {
+        int[] numbers = new int[a];
+        for (int i = 0; i < a; i++) {
+            numbers[i] = 1;
         }
-        System.out.println(sum);
+
+        
+
     }
+
 
 }
